@@ -12,12 +12,15 @@ print(f'G는 어디?: {a.index('G',5)}')
 # 값이 없으면 에러(예외)를 발생 시킨다.
 # print(a.index('H')) # ValueError: 'H' is not in list
 
-b = [3,4,1,2,3,4,5,6,1,3,2]  # 모든 3을 찾아 보세요
-idx = 0                                # idx 에 숫자 0 을 대입한다
-# while True:                       # while 문을 강제로 True 로 설정해서 작동시킨다 (반복문)
-#     idx = b.index(3,idx)      #
-#     print(f'3의 값은 {idx} 번에 있다.')
-#     idx += 1
+b = [3,4,1,2,3,4,5,6,1,3,2]            # b 라는 List 를 만든다
+idx = 0                                          # idx 에 숫자 0 을 대입한다
+while True:                                    # while 문을 강제로 True 로 설정해서 작동시킨다 (반복문)
+    idx = b.index(3,idx)       # idx 안에 b 라는 List 에서 0 번째부터 3이 있는 index 값을 찾는 명령을 넣는다
+    print(f'3의 값은 {idx} 번에 있다.') # 3 을 찾을 때마다 '3의 값은 idx(3 을 찾은) 번에 있다 라고 출력한다
+    idx += 1
+# 앞 전의 상태로 실행시키면 선언 해 둔 idx = 0 에 따라 0 번째 에서만 3을 찾기 때문에
+# 출력 할 때마다 idx(0) 에 +1 을 해서 다시 반복시킨다
+# 찾을 수 없을 때까지 반복시켜 고의로 에러를 만들어 반복문을 멈춘다
 
 for n in b:
     if n == 3:
