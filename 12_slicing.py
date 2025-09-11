@@ -25,4 +25,4 @@ print(arr)
 a = [1,2,3,4,5]
 b = ['a','b','c','d']
 print(a+b) # List 합치기
-print(a*3) # List 반복.
+print(a*3) # List 반복
