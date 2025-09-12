@@ -25,5 +25,15 @@ print(f'차집합1: {s1 - s2}')
 print(f'차집합2: {s1.difference(s2)}')
 
 # 값 1개 추가하기
+s1.add(10)
+print(s1)
+
 # 여러 개 추가하기
+s1.update([10,20,30])
+print(s1)
+
 # 특정 값 제거
+s1.remove(10)
+print(s1)
+# s1.remove(10) <- 없는 값을 지우려고 하면 KeyError 발생
+s1.discard(10) # remove 와 같으나 없는 값을 지우려고 해도 에러가 나지 않는다.
