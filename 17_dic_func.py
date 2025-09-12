@@ -1,3 +1,5 @@
+from tkinter.font import names
+
 dic = {
     'name':'hong,gil-dong',
     'phone':'555-555-5555',
@@ -40,3 +42,31 @@ for key in dic.keys():
 
 for item in dic.items():
     print(f'{item[0]}={item[1]}')
+
+members = {
+    'kim':63, 'lee':88, 'park':97, "gang":77, "hwang":100, "ga":65,
+    "na":92, "la":90, "wang":100, "gu":79
+}
+
+# 90이상인 사람의 이름만 출력
+
+for item in members.items():
+    if item[1] >= 90:
+        print(f'이름 : {item[0]}')
+
+# key in dic : 해당 키가 사전에 존재하는지 확인
+# 검색 시작여부를 결정 할 수 있는 방법
+
+yn = 'kim' in members
+print(f'kim 이 있는가? {yn}')
+
+yn = 'jung' in members
+print(f'jung 이 있는가? {yn}')
+
+# update : 이미 있는 키면 수정을, 없는 키면 추가를 하는 함수
+dic.update({'name' : '홍길동', 'age' : 30, 'married' : False})
+print(dic)
+
+# dic.clear() : 사전안의 내용을 모두 지운다.
+dic.clear()
+print(dic)
